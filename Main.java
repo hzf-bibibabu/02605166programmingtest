@@ -53,7 +53,7 @@ class Main{static public void main(String[] args){
     }
     for(int i=0;i< allstudentscid.size();i++){
         labelsmoudle[i]=new JLabel("waiting for loading");
-        panelmoudle[i].add(labelsleader[i]);
+        panelmoudle[i].add(labelsmoudle[i]);
     }
     for(int i=0;i<allstudentscid.size();i++){
         framemoudle.add(panelmoudle[i]);
@@ -98,7 +98,7 @@ class Main{static public void main(String[] args){
         noaiaverag[i]=students[i].getIndeprogrammingtest()+students[i].getDesignviva();
         noaiaverag[i]=noaiaverag[i]/2;
         haveaiaverage[i]=students[i].getAisoftware();
-        labelsmoudle[i].setText(noaiaverag[i]+"   "+haveaiaverage[i]);
+        labelsmoudle[i].setText(students[i].getName()+students[i].getCid()+noaiaverag[i]+"   "+haveaiaverage[i]);
         if(noaiaverag[i]-haveaiaverage[i]<-20.0){
             panelmoudle[i].setBackground(Color.RED);
         }
